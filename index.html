@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayVerseFlow | On-Demand Media Center</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="function.js"></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand">
+                <img class="brand-logo" src="assets/Logo/logo.png" alt="PlayVerseFlow logo">
+                <div>
+                    <h1>PlayVerseFlow</h1>
+                    <p>Stream non-copyright music, playlists, recommendations, and listening history.</p>
+                </div>
+            </div>
+            <nav class="topnav">
+                <a href="#player">Player</a>
+                <a href="#playlist">Playlist</a>
+                <a href="#categories">Genres</a>
+                <a href="#channels">Recommendations</a>
+                <a href="#youtube-sources">Sources</a>
+                <a href="#history">History</a>
+            </nav>
+        </header>
+
+        <main class="main-grid">
+            <section class="player-panel" id="player">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">On-demand streaming</p>
+                            <h2>Now Playing</h2>
+                        </div>
+                        <span class="tag">Royalty-free music</span>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="media-wrap">
+                            <audio
+                                id="media-player"
+                                controls
+                                preload="metadata"
+                            ></audio>
+                        </div>
+
+                        <div class="media-details">
+                            <div>
+                                <h3 id="media-title">Invincible</h3>
+                                <p id="media-type">Audio</p>
+                            </div>
+                            <img id="status-image" class="status-image" src="Audio Ready.png" alt="Audio ready status">
+                        </div>
+
+                        <div class="player-controls">
+                            <button id="show-video" class="button button-secondary active">Play</button>
+                            <button id="show-audio" class="button button-secondary">Open Source</button>
+                        </div>
+                        <p class="player-note">If a track fails to load, the error image will appear automatically.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="playlist-panel" id="playlist">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Curated playlists</p>
+                            <h2>Song library</h2>
+                        </div>
+                        <span class="tag">Tap to stream</span>
+                    </div>
+
+                    <ul id="playlist-list" class="list-group"></ul>
+                </div>
+            </section>
+
+            <section class="categories-panel" id="categories">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Browse genres</p>
+                            <h2>Music categories</h2>
+                        </div>
+                        <span class="tag">Find your mood</span>
+                    </div>
+
+                    <div class="category-grid">
+                        <button class="category-card">Electronic</button>
+                        <button class="category-card">Trap</button>
+                        <button class="category-card">Pop</button>
+                        <button class="category-card">Future Bass</button>
+                        <button class="category-card">Drumstep</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="youtube-panel" id="youtube-sources">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">YouTube music sources</p>
+                            <h2>Featured music links</h2>
+                        </div>
+                        <span class="tag">Non-copyright tracks</span>
+                    </div>
+
+                    <div id="youtube-grid" class="youtube-grid"></div>
+                </div>
+            </section>
+
+            <section class="channels-panel" id="channels">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Top creators</p>
+                            <h2>Recommended tracks</h2>
+                        </div>
+                        <span class="tag">Based on your library</span>
+                    </div>
+
+                    <div id="creator-grid" class="recommendation-grid"></div>
+                </div>
+            </section>
+
+            <section class="history-panel" id="history">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Track every session</p>
+                            <h2>Listening History</h2>
+                        </div>
+                        <span class="tag">Recent streams</span>
+                    </div>
+
+                    <ul id="history-list" class="history-list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
